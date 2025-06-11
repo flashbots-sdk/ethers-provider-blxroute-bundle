@@ -1,7 +1,7 @@
 
 # ethers-provider-blxroute-bundle
 
-This repository contains the `BlxrouteBundleProvider` ethers.js provider, a provider class that enables high-level access to Bloxroute's `blxr_simulate_bundle` and `blxr_submit_bundle` methods for its professional RPC endpoints. **Unlike Flashbots, Bloxroute supports multiple relays and miners across different chains and does not require running any local relay software.**
+This repository contains the `BlxrouteBundleProvider` ethers.js provider, a provider class that enables high-level access to Bloxroute's `blxr_simulate_bundle` and `blxr_submit_bundle` methods for its professional RPC endpoints. Unlike Flashbots, Bloxroute supports multiple relays and miners across different chains and does not require running any local relay software.
 
 Bloxroute relays expose custom JSON-RPC endpoints for bundle sending and simulation. Since these endpoints are non-standard, `ethers.js` and similar libraries don't support them natively. This provider extends ethers to make Bloxroute bundle interaction easier.
 
