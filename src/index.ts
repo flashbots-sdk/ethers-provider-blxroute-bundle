@@ -407,13 +407,13 @@ export class BlxrouteBundleProvider {
 
     const callResult = response.result;
     return {
-      bundleGasPrice: BigInt(callResult.bundleGasPrice),
+      bundleGasPrice: BigInt(callResult.bundleGasPrice ?? 0),
       bundleHash: callResult.bundleHash,
-      coinbaseDiff: BigInt(callResult.coinbaseDiff),
-      ethSentToCoinbase: BigInt(callResult.ethSentToCoinbase),
-      gasFees: BigInt(callResult.gasFees),
+      coinbaseDiff: BigInt(callResult.coinbaseDiff ?? 0),
+      ethSentToCoinbase: BigInt(callResult.ethSentToCoinbase ?? 0),
+      gasFees: BigInt(callResult.gasFees ?? 0),
       results: callResult.results,
-      stateBlockNumber: callResult.stateBlockNumber,
+      stateBlockNumber: callResult.stateBlockNumber ?? 0,
       totalGasUsed: callResult.results.reduce(
         (a: number, b: any) => a + b.gasUsed,
         0
