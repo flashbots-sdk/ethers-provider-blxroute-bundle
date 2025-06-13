@@ -4,10 +4,7 @@ import {
   Provider,
   Signer,
   Transaction,
-  FetchRequest,
   Wallet,
-  FetchResponse,
-  keccak256,
 } from "ethers";
 
 import axios, { AxiosRequestConfig } from "axios";
@@ -217,9 +214,8 @@ export class BlxrouteBundleProvider {
               "pending"
             ));
       nonces[address] = nonce + 1;
-      if (transaction.nonce === undefined) {
-        transaction.nonce = nonce;
-      }
+      transaction.nonce = nonce;
+
       if (
         (transaction.type == null || transaction.type == 0) &&
         transaction.gasPrice === undefined
